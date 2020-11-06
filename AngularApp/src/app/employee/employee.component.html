@@ -16,20 +16,8 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Eg : Snr. Developer">
-                  <label>Position :</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input type="text" name="office" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Enter office location">
-                  <label>Office :</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary per annum">
-                  <label>Salary :</label>
+                  <input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Eg : Email">
+                  <label>Email :</label>
                 </div>
               </div>
               <div class="row">
@@ -45,15 +33,15 @@
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
+                      <th>Email</th>
+                      <th>Updated At</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tr *ngFor="let emp of employeeService.employees">
                     <td>{{emp.name}}</td>
-                    <td>{{emp.position}}</td>
-                    <td>{{emp.office}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.updated_at}}</td>
                     <td>
                         <a class="action-btn" (click)="onEdit(emp)">
                           <i class="material-icons">edit</i>
